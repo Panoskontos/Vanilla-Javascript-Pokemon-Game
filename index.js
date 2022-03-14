@@ -15,8 +15,10 @@ console.log(pokemons_el)
 var i=0
 while (i<pokemons_el.length) {
     pokemons_el[i].onclick = function() {
-        var pokemon_name = this.querySelector('.title').textContent
+        // we will use javascript data attributes
+        var pokemon_name = this.dataset.pokemon
         console.log('i choose '+ pokemon_name)
     }
     i++
 }
+
