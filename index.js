@@ -6,3 +6,8 @@ function play() {
     audio.loop = false;
     audio.play(); 
 }
+
+
+// from select screen choose the pokemons
+var pokemons_el = document.querySelector('.select-screen').querySelectorAll('.character')
+console.log(pokemons_el)
