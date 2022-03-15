@@ -7,6 +7,9 @@ function play() {
     audio.play(); 
 }
 
+var game_state = {
+    pokemon: ''
+}
 
 // from select screen choose the pokemons
 var pokemons_el = document.querySelector('.select-screen').querySelectorAll('.character')
@@ -18,6 +21,9 @@ while (i<pokemons_el.length) {
         // we will use javascript data attributes
         var pokemon_name = this.dataset.pokemon
         console.log('i choose '+ pokemon_name)
+        game_state.pokemon = pokemon_name
+
+        console.log(game_state)
     }
     i++
 }
