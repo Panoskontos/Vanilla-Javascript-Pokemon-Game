@@ -8,7 +8,8 @@ function play() {
 }
 
 var game_state = {
-    pokemon: ''
+    pokemon: '',
+    rival: ''
 }
 
 // from select screen choose the pokemons
@@ -27,4 +28,18 @@ while (i<pokemons_el.length) {
     }
     i++
 }
+
+// function that return random numbers between a space
+function randomNumber(min,max){
+    return Math.floor( Math.random()*(max-min) + min)
+}
+
+console.log(randomNumber(0,3))
+
+// function that returns random pokemon
+function cpuPick() {
+    return pokemons_el[randomNumber(0,3)].dataset.pokemon
+}
+
+console.log(cpuPick())
 
