@@ -102,6 +102,10 @@ body {
   background: #64b2fa;
 }
 
+.select-screen .main .character:hover {
+  background: #4b37a3;
+}
+
 #battle-screen.active {
   top: -100vh;
   background-color: white;

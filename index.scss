@@ -101,7 +101,7 @@ body {
       float: left;
       margin: 0 25px;
       cursor: pointer;
-      
+
       &.charmander {
         background: #fa7a47;
       }
@@ -111,6 +111,10 @@ body {
       &.squirtle {
         background: #64b2fa;
       }
+    }
+
+    .character:hover {
+      background: #4b37a3;
     }
   }
 }
