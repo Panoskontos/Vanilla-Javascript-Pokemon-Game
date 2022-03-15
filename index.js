@@ -38,8 +38,8 @@ console.log(randomNumber(0,3))
 
 // function that returns random pokemon
 function cpuPick() {
-    return pokemons_el[randomNumber(0,3)].dataset.pokemon
+    game_state.rival = pokemons_el[randomNumber(0,3)].dataset.pokemon
+    console.log('rival is '+ game_state.rival)
 }
 
-console.log(cpuPick())
-
+cpuPick()
