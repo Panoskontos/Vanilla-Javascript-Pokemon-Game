@@ -1,6 +1,13 @@
 * {
   box-sizing: border-box;
 }
+
+body {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
 .header {
   background: #0a0618;
   background: -moz-linear-gradient(top, #0a0618 0%, #261c53 100%);
@@ -93,6 +100,8 @@
       border: 3px solid #000;
       float: left;
       margin: 0 25px;
+      cursor: pointer;
+      
       &.charmander {
         background: #fa7a47;
       }
@@ -105,6 +114,11 @@
     }
   }
 }
+#battle-screen.active {
+  top: -100vh;
+  background-color: white;
+}
+
 #battle-screen {
   background: url(//i.imgur.com/UZKEjzG.png) no-repeat center center;
   -webkit-background-size: 100% 100%;
@@ -116,6 +130,7 @@
   overflow: auto;
   height: 100vh;
   position: relative;
+  transition: top 0.5s ease-in-out;
   .fight-btn {
     font-family: "Bangers", cursive;
     text-transform: capitalize;
