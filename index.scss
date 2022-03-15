@@ -101,6 +101,7 @@ body {
       float: left;
       margin: 0 25px;
       cursor: pointer;
+      transition: background 0.3s ease-in-out;
 
       &.charmander {
         background: #fa7a47;

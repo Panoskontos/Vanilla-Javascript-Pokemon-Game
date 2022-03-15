@@ -88,6 +88,8 @@ body {
   float: left;
   margin: 0 25px;
   cursor: pointer;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
 }
 
 .select-screen .main .character.charmander {
