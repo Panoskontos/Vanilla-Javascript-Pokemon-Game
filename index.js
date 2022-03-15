@@ -1,5 +1,7 @@
 console.log('activating javascript')
 
+battle_screen = document.querySelector('#battle-screen')
+console.log(battle_screen)
 
 function play() {
     var audio = new Audio('audio_file.mp3');
@@ -23,8 +25,9 @@ while (i<pokemons_el.length) {
         var pokemon_name = this.dataset.pokemon
         console.log('i choose '+ pokemon_name)
         game_state.pokemon = pokemon_name
-
+        cpuPick()
         console.log(game_state)
+        battle_screen.classList.add('active')
     }
     i++
 }
@@ -42,4 +45,4 @@ function cpuPick() {
     console.log('rival is '+ game_state.rival)
 }
 
-cpuPick()
+// cpuPick()
