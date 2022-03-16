@@ -62,7 +62,13 @@ while (i<pokemons_el.length) {
         cpuPick()
         battle_screen.classList.add('active')
         var user_player_img = document.querySelector('.player').getElementsByTagName('img')
-        console.log(user_player_img)
+        // iterate array if name is selected
+        for (var i of pokemonDB){
+            if (i.name == pokemon_name){
+                user_player_img.src = i.img
+            }
+        }
+        
         // console.log(game_state)
     }
     i++
