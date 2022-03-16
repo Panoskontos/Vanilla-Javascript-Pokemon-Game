@@ -60,8 +60,10 @@ while (i<pokemons_el.length) {
         console.log('i choose '+ pokemon_name)
         game_state.pokemon = pokemon_name
         cpuPick()
-        console.log(game_state)
         battle_screen.classList.add('active')
+        var user_player_img = document.querySelector('.player1').getElementsByTagName('img')
+        console.log(user_player_img)
+        // console.log(game_state)
     }
     i++
 }

@@ -1,6 +1,6 @@
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
 }
 
@@ -12,7 +12,13 @@ body {
 
 .header {
   background: #0a0618;
-  background: -webkit-gradient(linear, left top, left bottom, from(#0a0618), to(#261c53));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#0a0618),
+    to(#261c53)
+  );
   background: linear-gradient(to bottom, #0a0618 0%, #261c53 100%);
   position: fixed;
   color: white;
@@ -42,8 +48,32 @@ body {
 
 .select-screen .main {
   background: #76590b;
-  background: -webkit-gradient(linear, left top, right top, from(#76590b), color-stop(10%, #cf9c11), color-stop(23%, #ecb414), color-stop(35%, #fafa74), color-stop(50%, #fafafa), color-stop(65%, #fafa74), color-stop(77%, #ecb414), color-stop(90%, #cf9c11), to(#76590b));
-  background: linear-gradient(to right, #76590b 0%, #cf9c11 10%, #ecb414 23%, #fafa74 35%, #fafafa 50%, #fafa74 65%, #ecb414 77%, #cf9c11 90%, #76590b 100%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#76590b),
+    color-stop(10%, #cf9c11),
+    color-stop(23%, #ecb414),
+    color-stop(35%, #fafa74),
+    color-stop(50%, #fafafa),
+    color-stop(65%, #fafa74),
+    color-stop(77%, #ecb414),
+    color-stop(90%, #cf9c11),
+    to(#76590b)
+  );
+  background: linear-gradient(
+    to right,
+    #76590b 0%,
+    #cf9c11 10%,
+    #ecb414 23%,
+    #fafa74 35%,
+    #fafafa 50%,
+    #fafa74 65%,
+    #ecb414 77%,
+    #cf9c11 90%,
+    #76590b 100%
+  );
   width: 100%;
   padding: 100px 50px;
   overflow: auto;
@@ -51,11 +81,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   height: 100vh;
 }
 
@@ -69,7 +99,7 @@ body {
   padding: 10px;
   text-align: center;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .select-screen .main .character {
@@ -79,11 +109,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   position: relative;
   border: 3px solid #000;
   float: left;
@@ -115,7 +145,6 @@ body {
 }
 
 #battle-screen {
-  background: url(//i.imgur.com/UZKEjzG.png) no-repeat center center;
   background-size: 100% 100%;
   width: 100%;
   padding: 100px 50px;
@@ -224,7 +253,7 @@ body {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
   -webkit-filter: FlipH;
-          filter: FlipH;
+  filter: FlipH;
   -ms-filter: "FlipH";
 }
 
