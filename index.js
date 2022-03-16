@@ -14,6 +14,31 @@ var game_state = {
     rival: ''
 }
 
+
+var pokemons = [
+    {
+        name:'charmander',
+        type:'fire',
+        attack:52,
+        stamina:39,
+        level:1
+    },
+    {
+        name:'bullbasaur',
+        type:'grass',
+        attack:52,
+        stamina:39,
+        level:1
+    },
+    {
+        name:'squirtle',
+        type:'water',
+        attack:52,
+        stamina:39,
+        level:1
+    },
+]
+
 // from select screen choose the pokemons
 var pokemons_el = document.querySelector('.select-screen').querySelectorAll('.character')
 console.log(pokemons_el)
