@@ -62,13 +62,18 @@ while (i<pokemons_el.length) {
         cpuPick()
         battle_screen.classList.add('active')
         var user_player_img = document.querySelector('.player').getElementsByTagName('img')
-        console.log(user_player_img)
+        var rival_player_img = document.querySelector('.player2').getElementsByTagName('img')
+        console.log(rival_player_img)
         // user_player_img[0].src = 'http://www.smogon.com/dex/media/sprites/xy/squirtle.gif'
         // iterate array if name is selected
         for (var i of pokemonDB){
             console.log(i)
             if (i.name == pokemon_name){
                 user_player_img[0].src = i.img
+            }
+
+            if (game_state.rival == i.name){
+                rival_player_img[0].src = i.img
             }
         }
         
