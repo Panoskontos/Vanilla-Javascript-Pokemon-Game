@@ -62,10 +62,13 @@ while (i<pokemons_el.length) {
         cpuPick()
         battle_screen.classList.add('active')
         var user_player_img = document.querySelector('.player').getElementsByTagName('img')
+        console.log(user_player_img)
+        // user_player_img[0].src = 'http://www.smogon.com/dex/media/sprites/xy/squirtle.gif'
         // iterate array if name is selected
         for (var i of pokemonDB){
+            console.log(i)
             if (i.name == pokemon_name){
-                user_player_img.src = i.img
+                user_player_img[0].src = i.img
             }
         }
         
