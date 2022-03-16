@@ -19,23 +19,32 @@ var pokemons = [
     {
         name:'charmander',
         type:'fire',
+        hp:46,
         attack:52,
+        defence:44,
         stamina:39,
-        level:1
+        level:1,
+        img:'http://www.smogon.com/dex/media/sprites/xy/charmander.gif'
     },
     {
-        name:'bullbasaur',
+        name:'bulbasaur',
         type:'grass',
-        attack:52,
-        stamina:39,
-        level:1
+        hp:45,
+        attack:50,
+        defence:48,
+        stamina:50,
+        level:1,
+        img:'http://www.smogon.com/dex/media/sprites/xy/bulbasaur.gif'
     },
     {
         name:'squirtle',
         type:'water',
-        attack:52,
-        stamina:39,
-        level:1
+        hp:54,
+        attack:48,
+        defence:56,
+        stamina:65,
+        level:1,
+        img:'http://www.smogon.com/dex/media/sprites/xy/squirtle.gif'
     },
 ]
 
