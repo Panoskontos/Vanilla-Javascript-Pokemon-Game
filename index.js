@@ -15,7 +15,7 @@ var game_state = {
 }
 
 
-var pokemons = [
+var pokemonDB = [
     {
         name:'charmander',
         type:'fire',
