@@ -110,8 +110,24 @@ while (a<attack_button_el.length) {
         var attack_name = this.dataset.attack
         game_state.current_user_attack = attack_name
         console.log(game_state.current_user_attack)
+        play(attack_name)
     }
     a++
+}
+
+var play = function(userAttack){
+    
+    switch(userAttack) {
+        case 'rock':
+            console.log(userAttack)
+            break;
+        case 'paper':
+            console.log(userAttack)
+            break;
+        case 'scissors':
+            console.log(userAttack)
+            break;
+      }
 }
 
 
