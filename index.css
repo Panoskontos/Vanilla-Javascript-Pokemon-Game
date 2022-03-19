@@ -426,8 +426,12 @@ body {
 /*# sourceMappingURL=index.css.map */
 
 .user-weapon {
-  background-color: #ffffff;
+  margin-top: 20px;
+  background-color: #754102;
   height: 40px;
+  color: white;
+  font-size: 1.3rem;
+  font-family: monospace;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -436,11 +440,15 @@ body {
 }
 
 .cpu-weapon {
-  background-color: #ffffff;
+  margin-top: 20px;
+  background-color: #754102;
   height: 40px;
+  color: white;
+  font-size: 1.3rem;
+  font-family: monospace;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 40px;
-  border-bottom: 4px solid crimson;
+  border-bottom: 4px solid rgb(143, 3, 3);
 }
