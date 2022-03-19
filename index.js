@@ -117,17 +117,21 @@ while (a<attack_button_el.length) {
 
 // 
 var play = function(userAttack,cpuAttack){
-    
+    var player_health = document.querySelector('#battle-screen').querySelector('.player .inside')
+    var cpu_health = document.querySelector('#battle-screen').querySelector('.cpu .inside')
+
     switch(userAttack) {
         case 'rock':
             if (cpuAttack=='paper'){
                 console.log('rock loses to paper')
                 console.log('you lose')
+                player_health.style.width = '80%'
             } else if (cpuAttack=="rock"){
                 console.log('it is a tie')
             } else {
                 console.log('rock beats scissors')
                 console.log('you win')
+                cpu_health.style.width = '80%'
             }
 
             break;
@@ -167,7 +171,7 @@ function cpuItem() {
     
 }
 
-
+// player_health.style.width = '80%'
 // user choose attack 
 
 // cpu health goes down
