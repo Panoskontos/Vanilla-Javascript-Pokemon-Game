@@ -96,3 +96,11 @@ function cpuPick() {
 }
 
 // cpuPick()
+
+// user choose attack 
+
+// cpu health goes down
+
+// cpu choose attack 
+
+//user health goes down 
