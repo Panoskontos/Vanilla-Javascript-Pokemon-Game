@@ -3,6 +3,7 @@ console.log('activating javascript')
 battle_screen = document.querySelector('#battle-screen')
 console.log(battle_screen)
 
+
 function play() {
     var audio = new Audio('audio_file.mp3');
     audio.loop = false;
@@ -120,13 +121,7 @@ var play = function(userAttack,cpuAttack){
     var player_health = document.querySelector('#battle-screen').querySelector('.player .inside')
     var cpu_health = document.querySelector('#battle-screen').querySelector('.cpu .inside')
     
-    if (parseInt(player_health.style.width) == 0) {
-        declareWinner('You')
-    }
-
-    if (parseInt(cpu_health.style.width) == 0) {
-        declareWinner('CPU')
-    }
+   
     
     // calculate_health(player_health)
 
@@ -173,6 +168,24 @@ var play = function(userAttack,cpuAttack){
             }
             break;
       }
+
+      if (parseInt(player_health.style.width) === 0) {
+        declareWinner('CPU')
+        setTimeout(function(){
+            location.reload();
+          }, 3000);
+        // location.reload()
+        
+        }
+
+        if (parseInt(cpu_health.style.width) === 0) {
+            declareWinner('You')
+            // location.reload()
+            setTimeout(function(){
+                location.reload();
+              }, 3000);
+            
+        }
 }
 
 var items = ['rock','paper','scissors']
@@ -194,6 +207,8 @@ var main_title = document.querySelector('#battle-screen').querySelector('.fight-
 function declareWinner(user){
     main_title.textContent =  user +' Win'
 }
+
+
 
 // player_health.style.width = '80%'
 // user choose attack 
