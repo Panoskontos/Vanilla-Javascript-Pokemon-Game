@@ -55,7 +55,17 @@ console.log(pokemons_el)
 var attack_button_el = document.querySelector('#battle-screen').querySelectorAll('.attack')
 // console.log(attack_button_el)
 
+// looping for choosing buttons 
+var a =0
+while (a<attack_button_el.length) {
+    attack_button_el[a].onclick = function (){
 
+    }
+    a++
+}
+
+
+// looping for choosing pokemon
 var i=0
 while (i<pokemons_el.length) {
     pokemons_el[i].onclick = function() {
