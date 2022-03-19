@@ -103,4 +103,10 @@ function cpuPick() {
 
 // cpu choose attack 
 
-//user health goes down 
+//user health goes down
+
+// rock > scissors
+
+// scissors > paper
+
+// paper > rock
