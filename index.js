@@ -11,7 +11,8 @@ function play() {
 
 var game_state = {
     pokemon: '',
-    rival: ''
+    rival: '',
+    current_user_attack:'',
 }
 
 // This is the database
@@ -54,15 +55,6 @@ console.log(pokemons_el)
 
 var attack_button_el = document.querySelector('#battle-screen').querySelectorAll('.attack')
 // console.log(attack_button_el)
-
-// looping for choosing buttons 
-var a =0
-while (a<attack_button_el.length) {
-    attack_button_el[a].onclick = function (){
-
-    }
-    a++
-}
 
 
 // looping for choosing pokemon
@@ -110,6 +102,18 @@ function cpuPick() {
 }
 
 // cpuPick()
+
+// looping for choosing buttons 
+var a =0
+while (a<attack_button_el.length) {
+    attack_button_el[a].onclick = function() {
+        var attack_name = this.dataset.attack
+        game_state.current_user_attack = attack_name
+        console.log(game_state.current_user_attack)
+    }
+    a++
+}
+
 
 // user choose attack 
 
