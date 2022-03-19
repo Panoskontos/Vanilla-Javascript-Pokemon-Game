@@ -119,19 +119,20 @@ while (a<attack_button_el.length) {
 var play = function(userAttack,cpuAttack){
     var player_health = document.querySelector('#battle-screen').querySelector('.player .inside')
     var cpu_health = document.querySelector('#battle-screen').querySelector('.cpu .inside')
+    // calculate_health(player_health)
 
     switch(userAttack) {
         case 'rock':
             if (cpuAttack=='paper'){
                 console.log('rock loses to paper')
                 console.log('you lose')
-                player_health.style.width = '80%'
+                player_health.style.width = calculate_health(player_health)
             } else if (cpuAttack=="rock"){
                 console.log('it is a tie')
             } else {
                 console.log('rock beats scissors')
                 console.log('you win')
-                cpu_health.style.width = '80%'
+                cpu_health.style.width = calculate_health(cpu_health)
             }
 
             break;
@@ -141,22 +142,23 @@ var play = function(userAttack,cpuAttack){
             } else if (cpuAttack=="rock"){
                 console.log('paper beats rock')
                 console.log('you win')
-
+                cpu_health.style.width = calculate_health(cpu_health)
             } else {
                 console.log('paper loses scissors')
                 console.log('you lose')
-
+                player_health.style.width = calculate_health(player_health)
             }
             break;
         case 'scissors':
             if (cpuAttack=='paper'){
                 console.log('scissors beat paper')
                 console.log('you win')
-
+                cpu_health.style.width = calculate_health(cpu_health)
+                
             } else if (cpuAttack=="rock"){
                 console.log('scissors loses to rock')
                 console.log('you lose')
-
+                player_health.style.width = calculate_health(player_health)
             } else {
                 console.log('it is a tie')
             }
@@ -169,6 +171,14 @@ var items = ['rock','paper','scissors']
 function cpuItem() {
     return  items[randomNumber(0,3)]
     
+}
+
+function calculate_health(userhealth){
+    num = parseInt(userhealth.style.width)
+    // minus the damage
+    damage = 20
+    num -= damage
+    return num+'%'
 }
 
 // player_health.style.width = '80%'
