@@ -119,6 +119,15 @@ while (a<attack_button_el.length) {
 var play = function(userAttack,cpuAttack){
     var player_health = document.querySelector('#battle-screen').querySelector('.player .inside')
     var cpu_health = document.querySelector('#battle-screen').querySelector('.cpu .inside')
+    
+    if (parseInt(player_health.style.width) == 0) {
+        declareWinner('You')
+    }
+
+    if (parseInt(cpu_health.style.width) == 0) {
+        declareWinner('CPU')
+    }
+    
     // calculate_health(player_health)
 
     switch(userAttack) {
@@ -154,7 +163,7 @@ var play = function(userAttack,cpuAttack){
                 console.log('scissors beat paper')
                 console.log('you win')
                 cpu_health.style.width = calculate_health(cpu_health)
-                
+
             } else if (cpuAttack=="rock"){
                 console.log('scissors loses to rock')
                 console.log('you lose')
@@ -179,6 +188,11 @@ function calculate_health(userhealth){
     damage = 20
     num -= damage
     return num+'%'
+}
+
+var main_title = document.querySelector('#battle-screen').querySelector('.fight-btn')
+function declareWinner(user){
+    main_title.textContent =  user +' Win'
 }
 
 // player_health.style.width = '80%'
