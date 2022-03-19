@@ -67,6 +67,11 @@ while (i<pokemons_el.length) {
         console.log('i choose '+ pokemon_name)
         game_state.pokemon = pokemon_name
         cpuPick()
+        // take different pokemons
+        while (game_state.pokemon == game_state.rival){
+            cpuPick()
+        }
+
         battle_screen.classList.add('active')
         var user_player_img = document.querySelector('.player').getElementsByTagName('img')
         var rival_player_img = document.querySelector('.player2').getElementsByTagName('img')
