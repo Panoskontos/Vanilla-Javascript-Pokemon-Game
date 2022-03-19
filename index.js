@@ -52,6 +52,10 @@ var pokemonDB = [
 var pokemons_el = document.querySelector('.select-screen').querySelectorAll('.character')
 console.log(pokemons_el)
 
+var attack_button_el = document.querySelector('#battle-screen').querySelectorAll('.attack')
+// console.log(attack_button_el)
+
+
 var i=0
 while (i<pokemons_el.length) {
     pokemons_el[i].onclick = function() {
