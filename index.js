@@ -110,21 +110,24 @@ while (a<attack_button_el.length) {
         var attack_name = this.dataset.attack
         game_state.current_user_attack = attack_name
         console.log(game_state.current_user_attack)
-        play(attack_name,'scissors')
+        play(attack_name,cpuItem())
     }
     a++
 }
 
+// 
 var play = function(userAttack,cpuAttack){
     
     switch(userAttack) {
         case 'rock':
             if (cpuAttack=='paper'){
                 console.log('rock loses to paper')
+                console.log('you lose')
             } else if (cpuAttack=="rock"){
                 console.log('it is a tie')
             } else {
                 console.log('rock beats scissors')
+                console.log('you win')
             }
 
             break;
@@ -133,15 +136,23 @@ var play = function(userAttack,cpuAttack){
                 console.log('it is a tie')
             } else if (cpuAttack=="rock"){
                 console.log('paper beats rock')
+                console.log('you win')
+
             } else {
                 console.log('paper loses scissors')
+                console.log('you lose')
+
             }
             break;
         case 'scissors':
             if (cpuAttack=='paper'){
                 console.log('scissors beat paper')
+                console.log('you win')
+
             } else if (cpuAttack=="rock"){
                 console.log('scissors loses to rock')
+                console.log('you lose')
+
             } else {
                 console.log('it is a tie')
             }
@@ -149,6 +160,12 @@ var play = function(userAttack,cpuAttack){
       }
 }
 
+var items = ['rock','paper','scissors']
+
+function cpuItem() {
+    return  items[randomNumber(0,3)]
+    
+}
 
 
 // user choose attack 
