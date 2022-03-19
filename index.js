@@ -63,7 +63,7 @@ var i=0
 while (i<pokemons_el.length) {
     pokemons_el[i].onclick = function() {
         // we will use javascript data attributes
-        playmusic()
+        // playmusic()
         var pokemon_name = this.dataset.pokemon
         console.log('i choose '+ pokemon_name)
         game_state.pokemon = pokemon_name

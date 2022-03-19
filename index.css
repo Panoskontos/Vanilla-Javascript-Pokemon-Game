@@ -141,7 +141,7 @@ body {
 
 #battle-screen.active {
   top: -100vh;
-  background-color: white;
+  background-image: url("https://i.pinimg.com/originals/df/4e/8b/df4e8ba28f912bf9cdf9fa0dfc196411.png");
 }
 
 #battle-screen {
@@ -400,4 +400,3 @@ body {
   height: 200px;
 }
 /*# sourceMappingURL=index.css.map */
-
