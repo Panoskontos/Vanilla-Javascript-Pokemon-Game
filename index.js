@@ -14,7 +14,7 @@ var game_state = {
     rival: ''
 }
 
-
+// This is the database
 var pokemonDB = [
     {
         name:'charmander',
