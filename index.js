@@ -114,10 +114,12 @@ function cpuPick() {
 var a =0
 while (a<attack_button_el.length) {
     attack_button_el[a].onclick = function() {
+        this.classList.add('userpicked')
         var attack_name = this.dataset.attack
         game_state.current_user_attack = attack_name
         console.log(game_state.current_user_attack)
         play(attack_name,cpuItem())
+        // this.classList.remove('userpicked')
     }
     a++
 }
@@ -197,8 +199,11 @@ var play = function(userAttack,cpuAttack){
 var items = ['rock','paper','scissors']
 
 function cpuItem() {
-    return  items[randomNumber(0,3)]
+    var item =  items[randomNumber(0,3)]
     
+
+    // find button
+    return item
 }
 
 function calculate_health(userhealth){
@@ -215,7 +220,7 @@ function declareWinner(user){
 }
 
 
-
+console.log()
 // player_health.style.width = '80%'
 // user choose attack 
 

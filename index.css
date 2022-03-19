@@ -186,6 +186,14 @@ body {
   cursor: pointer;
 }
 
+#battle-screen .battle-btns .userpicked {
+  background: rgb(2, 177, 2);
+}
+
+#battle-screen .battle-btns .cpupicked {
+  background: crimson;
+}
+
 #battle-screen .battle-btns .rock img {
   width: 75px;
   height: 56px;
