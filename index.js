@@ -57,13 +57,14 @@ console.log(pokemons_el)
 var attack_button_el = document.querySelector('#battle-screen').querySelectorAll('.attack')
 // console.log(attack_button_el)
 
-
+var weapon = document.querySelector('#battle-screen').querySelector('.user-weapon')
+var cpu_weapon =   document.querySelector('#battle-screen').querySelector('.cpu-weapon')
 // looping for choosing pokemon
 var i=0
 while (i<pokemons_el.length) {
     pokemons_el[i].onclick = function() {
         // we will use javascript data attributes
-        // playmusic()
+        playmusic()
         var pokemon_name = this.dataset.pokemon
         console.log('i choose '+ pokemon_name)
         game_state.pokemon = pokemon_name
@@ -115,12 +116,15 @@ var a =0
 var previous = 0
 while (a<attack_button_el.length) {
     attack_button_el[a].onclick = function() {
-        this.classList.add('userpicked')
         var attack_name = this.dataset.attack
         game_state.current_user_attack = attack_name
+
+        // add choice
+        weapon.textContent = attack_name
+
         console.log(game_state.current_user_attack)
         play(attack_name,cpuItem())
-        this.classList.remove('userpicked')
+        // this.classList.remove('userpicked')
     }
     a++
 }
@@ -201,7 +205,7 @@ var items = ['rock','paper','scissors']
 
 function cpuItem() {
     var item =  items[randomNumber(0,3)]
-    
+    cpu_weapon.textContent = item
 
     // find button
     return item

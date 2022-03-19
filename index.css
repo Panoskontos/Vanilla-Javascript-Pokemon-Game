@@ -424,3 +424,23 @@ body {
   height: 200px;
 }
 /*# sourceMappingURL=index.css.map */
+
+.user-weapon {
+  background-color: #ffffff;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  border-bottom: 4px solid green;
+}
+
+.cpu-weapon {
+  background-color: #ffffff;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  border-bottom: 4px solid crimson;
+}
