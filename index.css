@@ -219,6 +219,14 @@ body {
   cursor: pointer;
 }
 
+#battle-screen .battle-btns .userpicked {
+  background: rgb(2, 177, 2);
+}
+
+#battle-screen .battle-btns .cpupicked {
+  background: crimson;
+}
+
 #battle-screen .battle-btns .paper img {
   width: 75px;
   height: 56px;
@@ -242,6 +250,14 @@ body {
   border-bottom: 5px solid #5e3500;
   margin: 0 10px;
   cursor: pointer;
+}
+
+#battle-screen .battle-btns .userpicked {
+  background: rgb(2, 177, 2);
+}
+
+#battle-screen .battle-btns .cpupicked {
+  background: crimson;
 }
 
 #battle-screen .battle-btns .scissors img {

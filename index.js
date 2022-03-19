@@ -112,6 +112,7 @@ function cpuPick() {
 
 // looping for choosing buttons 
 var a =0
+var previous = 0
 while (a<attack_button_el.length) {
     attack_button_el[a].onclick = function() {
         this.classList.add('userpicked')
@@ -119,7 +120,7 @@ while (a<attack_button_el.length) {
         game_state.current_user_attack = attack_name
         console.log(game_state.current_user_attack)
         play(attack_name,cpuItem())
-        // this.classList.remove('userpicked')
+        this.classList.remove('userpicked')
     }
     a++
 }
@@ -220,7 +221,6 @@ function declareWinner(user){
 }
 
 
-console.log()
 // player_health.style.width = '80%'
 // user choose attack 
 
