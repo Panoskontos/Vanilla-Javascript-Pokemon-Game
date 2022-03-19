@@ -4,7 +4,7 @@ battle_screen = document.querySelector('#battle-screen')
 console.log(battle_screen)
 
 
-function play() {
+function playmusic() {
     var audio = new Audio('audio_file.mp3');
     audio.loop = false;
     audio.play(); 
@@ -63,6 +63,7 @@ var i=0
 while (i<pokemons_el.length) {
     pokemons_el[i].onclick = function() {
         // we will use javascript data attributes
+        playmusic()
         var pokemon_name = this.dataset.pokemon
         console.log('i choose '+ pokemon_name)
         game_state.pokemon = pokemon_name
